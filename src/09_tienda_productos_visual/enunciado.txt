@@ -1,0 +1,16 @@
+Simula un pequeño sistema de ventas para una tienda virtual de 
+camisetas personalizadas.
+
+Requisitos técnicos:
+
+Registrar productos (nombre, stock, precio).
+
+Crear pedidos (cliente, producto, cantidad).
+
+Ver historial de ventas.
+
+Validar stock disponible antes de vender.
+
+Archivos productos.csv y ventas.csv.
+
+Menú con opciones de administrar productos y ventas.

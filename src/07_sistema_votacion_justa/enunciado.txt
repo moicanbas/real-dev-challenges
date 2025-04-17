@@ -1,0 +1,18 @@
+Una asociación de vecinos quiere organizar votaciones internas digitales
+para elegir delegados o tomar decisiones rápidas.
+
+Requisitos técnicos:
+
+Registrar votantes (nombre, número de ID único).
+
+Registrar candidatos.
+
+Permitir a un votante emitir su voto solo una vez.
+
+Ver resultados de la votación (conteo por candidato).
+
+Guardar en votos.csv.
+
+Validar unicidad del votante.
+
+Menú en consola con protección básica.

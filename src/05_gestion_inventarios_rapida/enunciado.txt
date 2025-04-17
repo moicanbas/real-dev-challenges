@@ -1,0 +1,18 @@
+Una tienda de productos naturales necesita un sistema para llevar control
+básico de su inventario desde un computador viejo.
+
+Requisitos técnicos:
+
+Agregar producto (nombre, cantidad, precio unitario).
+
+Ver todos los productos.
+
+Buscar producto por nombre.
+
+Actualizar stock.
+
+Eliminar producto.
+
+Datos en inventario.csv.
+
+Validar cantidades y precios como números válidos.

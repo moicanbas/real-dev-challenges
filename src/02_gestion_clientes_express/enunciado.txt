@@ -1,0 +1,18 @@
+Enunciado: Un pequeño taller mecánico necesita digitalizar su libreta de clientes para
+no perder sus datos y hacer seguimiento a visitas.
+
+Requisitos técnicos:
+
+Registrar cliente (nombre, placa del vehículo, teléfono).
+
+Consultar todos los clientes.
+
+Buscar cliente por nombre o placa.
+
+Eliminar cliente por nombre.
+
+Guardar información en clientes.csv.
+
+Validar que la placa siga el formato estándar (3 letras, 3 números).
+
+Menú en bucle hasta que el usuario decida salir.

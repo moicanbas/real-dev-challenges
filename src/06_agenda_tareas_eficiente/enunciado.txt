@@ -1,0 +1,18 @@
+Un freelancer necesita una agenda digital para gestionar sus tareas
+y entregas semanales.
+
+Requisitos técnicos:
+
+Crear tareas (descripción, fecha límite, prioridad).
+
+Ver todas las tareas ordenadas por fecha.
+
+Marcar tareas como completadas.
+
+Filtrar por tareas pendientes.
+
+Almacenar en tareas.csv.
+
+Validar fechas y prioridad (alta/media/baja).
+
+Menú interactivo con persistencia.

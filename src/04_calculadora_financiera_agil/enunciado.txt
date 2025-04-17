@@ -1,0 +1,16 @@
+Ayuda a una emprendedora a gestionar sus gastos mensuales y saber cuánto puede ahorrar al mes.
+
+Requisitos técnicos:
+
+Registrar ingresos y egresos con fecha, descripción y monto.
+
+Ver resumen mensual (total ingresos, egresos, balance).
+
+Buscar movimientos por palabra clave.
+
+Exportar movimientos a finanzas.csv.
+
+Validar formatos de fecha y monto numérico.
+
+Interfaz en consola, menú persistente.
+

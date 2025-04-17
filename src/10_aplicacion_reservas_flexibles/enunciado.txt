@@ -1,0 +1,18 @@
+Un espacio de coworking quiere una app para manejar las reservas 
+de salas de reunión sin solapamientos y con confirmaciones automáticas.
+
+Requisitos técnicos:
+
+Crear reserva (nombre, sala, fecha, hora).
+
+Consultar reservas por sala y fecha.
+
+Cancelar reserva por nombre y fecha.
+
+Validar solapamientos.
+
+Exportar a reservas.csv.
+
+Formatos correctos de fecha/hora.
+
+Menú dinámico.

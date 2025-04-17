@@ -1,0 +1,16 @@
+Una familia quiere controlar sus gastos de forma divertida, agrupando 
+por categorías y viendo qué tanto están gastando en comida rápida.
+
+Requisitos técnicos:
+
+Registrar gasto (fecha, categoría, descripción, monto).
+
+Consultar gastos por categoría.
+
+Calcular gasto total mensual.
+
+Generar reporte en gastos.csv.
+
+Validar formato de monto y categorías predefinidas.
+
+Menú de navegación intuitivo.

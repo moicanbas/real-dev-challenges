@@ -1,0 +1,19 @@
+Enunciado: Una profesora quiere una herramienta para llevar el control de notas 
+de sus estudiantes sin depender de hojas de cálculo.
+
+Requisitos técnicos:
+
+Registrar estudiante y su nota (nombre, nota entre 0-100).
+
+Consultar todos los estudiantes.
+
+Calcular el promedio general.
+
+Buscar estudiantes con nota superior a X.
+
+Almacenar en notas.csv.
+
+Validar que la nota sea numérica y esté en rango.
+
+Menú interactivo en consola.
+

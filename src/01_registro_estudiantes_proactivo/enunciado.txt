@@ -1,0 +1,19 @@
+Enunciado: Una academia digital quiere un sistema ligero para registrar estudiantes interesados en sus cursos. 
+Este sistema se usará para eventos y ferias tecnológicas.
+
+Requisitos técnicos:
+
+Registrar estudiantes con nombre completo, edad y curso de interés.
+
+Permitir consultar todos los inscritos.
+
+Buscar un estudiante por nombre.
+
+Eliminar un registro por nombre.
+
+Guardar los datos en estudiantes.csv.
+
+Validar edad como número entero.
+
+Menú interactivo por consola.
+
