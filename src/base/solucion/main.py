@@ -1,56 +1,50 @@
-# Lista vacía para guardar reservas
-reservas = []
+# Sprint 3: Usamos funciones y guardamos datos en un archivo CSV
 
-# Menú principal
-while True:
-    print("\n=== Juancho Barber's Shop ===")
+def mostrar_menu():
+    print("\n=== Juancho Barber’s Shop ===")
     print("1. Registrar nueva reserva")
     print("2. Ver todas las reservas")
     print("3. Salir")
-    
-    opcion = input("Selecciona una opción (1-3): ")
 
-    if opcion == "1":
-        # Solicitar datos al usuario
-        nombre = input("Nombre del cliente: ").strip()
-        fecha = input("Fecha (DD/MM/AAAA): ").strip()
-        hora = input("Hora (HH:MM): ").strip()
-        servicio = input("Servicio (corte, barba, ambos): ").strip().lower()
-        
-        # Validaciones básicas
-        if servicio not in ["corte", "barba", "ambos"]:
-            print("❌ Servicio no válido. Intenta nuevamente.")
-            continue
+def registrar_reserva():
+    nombre = input("Nombre del cliente: ")
+    fecha = input("Fecha (DD/MM/AAAA): ")
+    hora = input("Hora (HH:MM): ")
+    servicio = input("Servicio (corte, barba, ambos): ")
 
-        # Verificar si ya hay una reserva igual
-        existe = False
-        for r in reservas:
-            if r["nombre"] == nombre and r["fecha"] == fecha and r["hora"] == hora:
-                existe = True
-                break
-        
-        if existe:
-            print("⚠️ Ya existe una reserva para ese cliente en ese horario.")
+    linea = f"{nombre},{fecha},{hora},{servicio}\n"
+
+    with open("reservas.csv", "a") as archivo:
+        archivo.write(linea)
+
+    print("✅ Reserva guardada.")
+
+def ver_reservas():
+    print("\n📅 Reservas registradas:")
+    try:
+        with open("reservas.csv", "r") as archivo:
+            for linea in archivo:
+                datos = linea.strip().split(",")
+                if len(datos) == 4:
+                    print(f"- Cliente: {datos[0]}, Fecha: {datos[1]}, Hora: {datos[2]}, Servicio: {datos[3]}")
+    except FileNotFoundError:
+        print("No hay reservas registradas todavía.")
+
+# Ciclo principal (bucle while)
+def iniciar():
+    while True:
+        mostrar_menu()
+        opcion = input("Elige una opción (1-3): ")
+
+        if opcion == "1":
+            registrar_reserva()
+        elif opcion == "2":
+            ver_reservas()
+        elif opcion == "3":
+            print("👋 Hasta la próxima!")
+            break
         else:
-            reservas.append({
-                "nombre": nombre,
-                "fecha": fecha,
-                "hora": hora,
-                "servicio": servicio
-            })
-            print("✅ Reserva registrada con éxito.")
+            print("Opción inválida. Intenta de nuevo.")
 
-    elif opcion == "2":
-        if len(reservas) == 0:
-            print("No hay reservas registradas aún.")
-        else:
-            print("\n📅 Reservas registradas:")
-            for r in reservas:
-                print(f"- {r['fecha']} {r['hora']} | {r['nombre']} | {r['servicio']}")
-
-    elif opcion == "3":
-        print("Gracias por usar el sistema. ¡Hasta pronto!")
-        break
-
-    else:
-        print("❌ Opción inválida. Intenta nuevamente.")
+# Iniciamos el programa
+iniciar()
