@@ -1,0 +1,24 @@
+Tu cliente es una barbería local que necesita un sistema sencillo para registrar y 
+consultar reservas de citas. El programa debe permitir:
+
+Funcionalidades requeridas:
+Registrar una nueva reserva
+
+Se debe solicitar al usuario:
+
+Nombre del cliente
+
+Fecha (en formato DD/MM/AAAA)
+
+Hora (en formato HH:MM)
+
+Servicio (corte, barba, ambos)
+
+Ver todas las reservas registradas.
+
+Consultar reservas por fecha:
+El usuario puede ingresar una fecha y el sistema debe mostrar las reservas programadas para ese día.
+
+Cancelar una reserva por nombre y fecha.
+
+Exportar todas las reservas a un archivo reservas.csv.
