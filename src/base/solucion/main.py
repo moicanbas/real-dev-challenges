@@ -1,21 +1,56 @@
-# Bienvenida
-print("Bienvenido al sistema de reservas de Juancho Barber's Shop 🧔✂️")
+# Lista vacía para guardar reservas
+reservas = []
 
-# Entrada de datos
-nombre_cliente = input("Ingresa tu nombre: ")
-fecha = input("Ingresa la fecha de tu reserva (DD/MM/AAAA): ")
-hora = input("Ingresa la hora de tu reserva (HH:MM): ")
+# Menú principal
+while True:
+    print("\n=== Juancho Barber's Shop ===")
+    print("1. Registrar nueva reserva")
+    print("2. Ver todas las reservas")
+    print("3. Salir")
+    
+    opcion = input("Selecciona una opción (1-3): ")
 
-print("Servicios disponibles: corte, barba, ambos")
-servicio = input("Ingresa el servicio que deseas: ")
+    if opcion == "1":
+        # Solicitar datos al usuario
+        nombre = input("Nombre del cliente: ").strip()
+        fecha = input("Fecha (DD/MM/AAAA): ").strip()
+        hora = input("Hora (HH:MM): ").strip()
+        servicio = input("Servicio (corte, barba, ambos): ").strip().lower()
+        
+        # Validaciones básicas
+        if servicio not in ["corte", "barba", "ambos"]:
+            print("❌ Servicio no válido. Intenta nuevamente.")
+            continue
 
-# Mostrar los datos ingresados
-print("\n✅ ¡Reserva registrada con éxito!")
-print("Resumen de tu reserva:")
-print("Nombre:", nombre_cliente)
-print("Fecha:", fecha)
-print("Hora:", hora)
-print("Servicio:", servicio)
+        # Verificar si ya hay una reserva igual
+        existe = False
+        for r in reservas:
+            if r["nombre"] == nombre and r["fecha"] == fecha and r["hora"] == hora:
+                existe = True
+                break
+        
+        if existe:
+            print("⚠️ Ya existe una reserva para ese cliente en ese horario.")
+        else:
+            reservas.append({
+                "nombre": nombre,
+                "fecha": fecha,
+                "hora": hora,
+                "servicio": servicio
+            })
+            print("✅ Reserva registrada con éxito.")
 
-# Datos en variables (aún no guardamos en archivos)
-# Se pueden reutilizar más adelante en otra parte del código o imprimirse de nuevo
+    elif opcion == "2":
+        if len(reservas) == 0:
+            print("No hay reservas registradas aún.")
+        else:
+            print("\n📅 Reservas registradas:")
+            for r in reservas:
+                print(f"- {r['fecha']} {r['hora']} | {r['nombre']} | {r['servicio']}")
+
+    elif opcion == "3":
+        print("Gracias por usar el sistema. ¡Hasta pronto!")
+        break
+
+    else:
+        print("❌ Opción inválida. Intenta nuevamente.")
